@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Palette } from 'lucide-react';
 
@@ -56,8 +56,8 @@ const Navbar = () => {
                 to={link.path}
                 className={`font-medium transition-colors duration-300 ${
                   location.pathname === link.path
-                    ? 'text-indigo-600'
-                    : 'text-gray-700 hover:text-indigo-600'
+                    ? 'text-white'
+                    : 'text-gray-700 hover:text-white'
                 }`}
               >
                 {link.name}

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Star, Quote } from 'lucide-react';
 
 const TestimonialsSection = () => {

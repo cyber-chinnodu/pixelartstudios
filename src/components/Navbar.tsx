@@ -44,8 +44,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
-            <Palette size={28} className="text-indigo-600" />
-            <span className="text-xl font-bold text-gray-900">PixelCraft Studio</span>
+            <Palette size={28} className={`${scrolled ? 'text-indigo-600' : 'text-white'}`} />
+            <span className={`text-xl font-bold ${scrolled ? 'text-indigo-600' : 'text-white'}`}>PixelCraft Studio</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -56,8 +56,9 @@ const Navbar = () => {
                 to={link.path}
                 className={`font-medium transition-colors duration-300 ${
                   location.pathname === link.path
-                    ? 'text-white'
-                    : 'text-gray-700 hover:text-white'
+                    ? `${scrolled ? 'text-indigo-600' : 'text-white'}`
+                    // : 'text-gray-700 hover:text-white'
+                    :`${scrolled ? 'text-indigo-600' : 'text-gray-700 hover:text-white'}`
                 }`}
               >
                 {link.name}
@@ -87,8 +88,8 @@ const Navbar = () => {
                   to={link.path}
                   className={`font-medium transition-colors duration-300 ${
                     location.pathname === link.path
-                      ? 'text-indigo-600'
-                      : 'text-gray-700 hover:text-indigo-600'
+                      ? 'text-white'
+                      : 'text-gray-700 hover:text-white'
                   }`}
                   onClick={closeMenu}
                 >
